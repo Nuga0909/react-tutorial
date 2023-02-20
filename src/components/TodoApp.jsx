@@ -2,11 +2,13 @@ import Header from "./Header";
 import TodosLogic from "./TodosLogic";
 
 const TodoApp = () => {
-    return (
-      <>
+  return (
+    <div className="wrapper">
+      <div className="todos">
         <Header />
-        <TodosLogic/>
-      </>
-    );
-  };
-  export default TodoApp;
+        <TodosLogic />
+      </div>
+    </div>
+  );
+};
+export default TodoApp;
