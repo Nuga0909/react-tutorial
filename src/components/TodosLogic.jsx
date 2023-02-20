@@ -20,10 +20,13 @@ const TodosLogic = () => {
     completed: false,
   },
 ]);
+const delTodo = (id) => {
+  console.log('deleted', id);
+};
   return (
     <div>
       <InputTodo />
-      <TodosList todosProps={todos} setTodos={setTodos} />
+      <TodosList todosProps={todos} setTodos={setTodos} delTodo={delTodo}/>
     </div>
   );
 };
