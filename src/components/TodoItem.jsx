@@ -1,7 +1,17 @@
 const TodoItem = ({ itemProp, setTodos }) => {
 
   const handleChange = (id) => {
-    console.log('clicked', id);
+    setTodos((prevState) =>
+    prevState.map((todo) => {
+      if (todo.id === id) {
+        return {
+          ...todo,
+          completed: !todo.completed,
+        };
+      }
+      return todo;
+    })
+  );
   };
 
   return (
